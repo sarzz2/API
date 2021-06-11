@@ -1,0 +1,28 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+black = "*"
+flake8 = "*"
+pre-commit = "*"
+pytest-asyncio = "*"
+
+[packages]
+postdb = "*"
+pyjwt = "*"
+aiohttp = "*"
+uvloop = {markers = "platform_system == 'linux'", version = "*"}
+fastapi = "*"
+uvicorn = "*"
+requests = "*"
+
+[requires]
+python_version = "3.8"
+
+[pipenv]
+allow_prereleases = true
+
+[scripts]
+lint = "pre-commit run --all-files"
